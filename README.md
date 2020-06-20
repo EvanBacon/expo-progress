@@ -16,6 +16,12 @@
   </a>
 </p>
 
+<p align="center">
+  <a aria-label="made with expo" href="https://snack.expo.io/@bacon/expo-progress" target="_blank">
+    <b>Try it with Snack 🥳</b>
+  </a>
+  
+</p>
 A simple progress bar component that you can use with Expo (iOS, Android, web).
 
 I created this as an alternative to using a bunch of different packages across iOS, Android, and web. This is still natively accelerated using popular packages shipped in the Expo standard library (SVG, and Reanimated).
