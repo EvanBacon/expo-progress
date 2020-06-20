@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to the Expo Progress 👋</h1>
+<h1 align="center">Welcome to Expo Progress 👋</h1>
 
 <p align="center">
   <img align="center" alt="Product: demo" src="https://media.giphy.com/media/ZBzWLLz4sO0MtZ57gb/giphy.gif" />
