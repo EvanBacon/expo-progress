@@ -71,7 +71,7 @@ import * as React from 'react';
 import * as Progress from 'expo-progress';
 
 export default function App() {
-  return <Progress isIndeterminate color="blue" />;
+  return <Progress.Bar isIndeterminate color="blue" />;
 }
 ```
 
