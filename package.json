@@ -1,6 +1,6 @@
 {
   "name": "expo-progress",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Indicate loading state with a universal progress component",
   "sideEffects": false,
   "author": "Evan Bacon <bacon@expo.io> (https://github.com/evanbacon)",
