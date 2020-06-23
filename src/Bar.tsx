@@ -200,6 +200,7 @@ function ProgressBar({
       onLayout={(e: LayoutChangeEvent) => {
         setWidth(e.nativeEvent.layout.width);
       }}
+      resizeMode={'stretch'}
       style={[
         styles.container,
         {
@@ -240,7 +241,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'transparent',
     overflow: 'hidden',
-    resizeMode: 'stretch',
   },
   bar: {
     resizeMode: 'stretch',
