@@ -159,6 +159,14 @@ export type ProgressBarProps = {
    * Style for the loading indicator container view.
    */
   style?: ImageBackgroundProps['style'];
+
+    /**
+   * reverse the loading from right to left.
+   *
+   * @default false
+   */
+  reverse?: boolean;
+
 };
 ```
 

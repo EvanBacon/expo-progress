@@ -90,12 +90,20 @@ export type ProgressBarProps = {
    * Style for the loading indicator container view.
    */
   style?: ImageBackgroundProps['style'];
+
+    /**
+   * reverse the loading from right to left.
+   *
+   * @default false
+   */
+  reverse?: boolean;
+
 };
 
 const minProgress = 0;
 const maxProgress = 1;
 
-function useCode(nodeFactory, dependencies) {
+function useCode(nodeFactory :any, dependencies :any) {
   if (!(React.useEffect instanceof Function)) return;
 
   // @ts-ignore
@@ -135,6 +143,7 @@ function ProgressBar({
   progress = isIndeterminate ? 0.5 : 0,
   height = 7,
   borderRadius = height * 0.5,
+  reverse = false,
   // Default iOS blue
   color = '#007aff',
   trackColor = 'transparent',
@@ -168,6 +177,7 @@ function ProgressBar({
       return set(progressValue, progress);
     }
   }, [progress]);
+  
 
   useCode(() => {
     if (isIndeterminate) {
@@ -188,11 +198,18 @@ function ProgressBar({
   // todo: web has a bug where the reanimated Animated.View style is not updating unless this is an animated value.
   let translateX: Node<number> | number = useValue(0);
 
-  if (isIndeterminate) {
+  if (isIndeterminate && !reverse) {
     translateX = interpolate(indeterminateValue, {
       inputRange: [0, 1],
       outputRange: [multiply(-1, animatedWidth), width],
     });
+  }
+
+  if(isIndeterminate && reverse){
+    translateX = interpolate(indeterminateValue, {
+        inputRange: [0, 1],
+        outputRange: [width, multiply(-1, animatedWidth)],
+      });
   }
 
   return (
